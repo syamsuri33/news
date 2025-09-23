@@ -25,7 +25,7 @@ class NewsController extends Controller
         ]);
 
         $pageSize = 9;
-//test
+//test 2x
         // Time filters
         if ($time) {
             if ($time === 'today') {
