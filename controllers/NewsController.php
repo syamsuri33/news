@@ -26,7 +26,7 @@ class NewsController extends Controller
 
         $pageSize = 9;
 
-        // Time filter
+        // Time filters
         if ($time) {
             if ($time === 'today') {
                 $params['from'] = date('Y-m-d');
