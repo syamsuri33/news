@@ -76,7 +76,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <div class="container justify-content-center">
                         <ul class="navbar-nav flex-row justify-content-center">
                             <?php foreach (['Business', 'Entertainment', 'General', 'Health', 'Science', 'Sports', 'Technology'] as $cat): ?>
-                                <?php $isActive = strtolower($cat) === strtolower($currentCategory); ?>
+                                <?php $isActive = strtolower($cat ?? '') === strtolower($currentCategory ?? ''); ?>
+
                                 <li class="nav-item px-2">
                                     <a class="nav-link <?= $isActive ? 'active text-black fw-bold bg-light ' : 'text-light bg-dark' ?>"
                                         href="<?= Url::to(['/site/index', 'category' => strtolower($cat)]) ?>">
