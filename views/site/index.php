@@ -61,7 +61,7 @@ $currentCategory = Yii::$app->request->get('category');
     </div>
 
     <div class="container-fluid bg-dark">
-        <h2 class="text-light">Top Ten News <?php echo ucfirst($currentCategory);?></h2>
+        <h2 class="text-light">  Top Ten News <?= ucfirst($currentCategory ?? '') ?></h2>
     </div>
 
     <div class="container">
